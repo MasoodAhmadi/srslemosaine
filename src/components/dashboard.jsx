@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import { cars } from "../data/car.js";
 
 export default function Dashboard() {
-  const [activeTab, setActiveTab] = useState(cars[0].name); // Default to the first car
+  const [activeTab, setActiveTab] = useState("Sedan"); // Default to "Sedan"
 
   return (
     <div className="min-vh-100 d-flex flex-column">
@@ -22,48 +22,114 @@ export default function Dashboard() {
       <main className="flex-grow-1 p-4">
         <h1 className="display-3 mb-4">Choose Your Ride</h1>
 
-        <div className="nav nav-tabs" id="carTabs" role="tablist">
-          {cars.map((car) => (
+        <div
+          className="nav nav-tabs mb-4 bg-white rounded-top justify-content-center"
+          id="carTabs"
+          role="tablist"
+        >
+          {["Sedan", "SUV", "Convertible"].map((tab) => (
             <a
-              key={car.name}
+              key={tab}
               className={`nav-item nav-link ${
-                activeTab === car.name ? "active" : ""
+                activeTab === tab ? "active custom-tab-active" : ""
               }`}
-              id={`${car.name}-tab`}
-              onClick={() => setActiveTab(car.name)}
+              id={`${tab}-tab`}
+              onClick={() => setActiveTab(tab)}
               role="tab"
+              style={{
+                cursor: "pointer",
+                padding: "12px 24px",
+                fontSize: activeTab === tab ? "1.15rem" : "1.05rem",
+                fontWeight: activeTab === tab ? "600" : "500",
+                borderRadius: "0.75rem 0.75rem 0 0",
+                margin: "0 6px",
+              }}
             >
-              {car.name}
+              {tab}
             </a>
           ))}
         </div>
 
         <div className="tab-content mt-4">
-          {cars.map((car) => (
+          {activeTab === "Sedan" ? (
             <div
-              key={car.name}
-              className={`tab-pane fade ${
-                activeTab === car.name ? "show active" : ""
-              }`}
-              id={car.name}
+              className="tab-pane fade show active"
+              id="Sedan"
               role="tabpanel"
             >
-              <div className="card mt-3">
-                <div className="card-body">
-                  <h5 className="card-title">{car.name}</h5>
-                  <img
-                    src={car.image}
-                    alt={car.name}
-                    className="img-fluid mb-3"
-                    style={{ maxHeight: "250px", objectFit: "cover" }}
-                  />
-                  <p className="card-text">{car.description}</p>
-                  <p className="card-text font-weight-bold">{car.price}</p>
-                  <Button variant="primary">Book Now</Button>
-                </div>
+              <div className="row">
+                {cars
+                  .filter((car) => car.name.toLowerCase().includes("sedan"))
+                  .map((car, index) => (
+                    <div key={index} className="col-12 col-sm-6 col-md-4 mb-4">
+                      <div className="card h-100">
+                        <div className="ratio ratio-4x3">
+                          <img
+                            src={car.image}
+                            alt={car.name}
+                            className="card-img-top"
+                            style={{ objectFit: "cover" }}
+                          />
+                        </div>
+                        <div className="card-body d-flex flex-column">
+                          <h5 className="card-title">{car.name}</h5>
+                          <p className="card-text">{car.description}</p>
+                          <p className="card-text fw-bold">{car.price}</p>
+                          <Button variant="primary" className="mt-auto">
+                            Book Now
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
               </div>
             </div>
-          ))}
+          ) : (
+            <div
+              className="tab-pane fade show active"
+              id={activeTab}
+              role="tabpanel"
+            >
+              {cars
+                .filter((car) => car.name === activeTab)
+                .map((car, index) => (
+                  <div key={index} className="col-12 col-sm-6 col-md-4 mb-4">
+                    <div className="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                      <div className="ratio ratio-4x3">
+                        <img
+                          src={car.image}
+                          alt={car.name}
+                          className="card-img-top"
+                          style={{
+                            objectFit: "cover",
+                          }}
+                        />
+                      </div>
+                      <div className="card-body d-flex flex-column p-4">
+                        <h5 className="card-title fw-semibold mb-2">
+                          {car.name}
+                        </h5>
+                        <p
+                          className="card-text text-muted mb-1"
+                          style={{ minHeight: "60px" }}
+                        >
+                          {car.description}
+                        </p>
+                        <p className="card-text fw-bold text-primary mb-3">
+                          {car.price}
+                        </p>
+                        <Button
+                          variant="primary"
+                          className="mt-auto w-100 rounded-pill"
+                        >
+                          Book Now
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          )}
         </div>
       </main>
 

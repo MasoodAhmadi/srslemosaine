@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+.custom-tab-active {
+  background-color: #dcdbeb !important; /* Bright orange */
+  color: #000 !important;
+  font-weight: bold;
+  border: 1px solid #f49e00;
+  border-bottom: none; /* To blend with tab content */
+  z-index: 1;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.nav-link {
+  background-color: #007bf5;
+  color: #495057;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #ffffff;
+}
