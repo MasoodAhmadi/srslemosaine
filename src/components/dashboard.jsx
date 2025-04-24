@@ -144,6 +144,68 @@ export default function Dashboard() {
             </div>
           )}
         </div>
+
+        {/* Company Information Section */}
+        <section className="company-info mt-5 p-4 bg-light rounded shadow-sm">
+          <div className="container">
+            <h2 className="h4 mb-4 text-center text-primary">
+              About SRSR Group LLC
+            </h2>
+            <div className="row">
+              <div className="col-12 col-md-6">
+                <p>
+                  SRSR Group LLC is a leading transportation service provider
+                  based in California, USA. Established with the vision of
+                  offering reliable and luxurious transportation options, we
+                  specialize in providing a wide range of vehicles, including
+                  Sedans, SUVs, and Convertibles.
+                </p>
+                <p>
+                  Our mission is to ensure customer satisfaction by delivering
+                  top-notch services and maintaining a fleet of well-maintained
+                  vehicles. Whether you're planning a city ride, an off-road
+                  adventure, or a stylish drive, SRSR Group LLC has the perfect
+                  vehicle for you.
+                </p>
+              </div>
+              <div className="col-12 col-md-6 text-center">
+                <i
+                  className="fas fa-building text-primary"
+                  style={{ fontSize: "100px" }}
+                ></i>
+              </div>
+            </div>
+            <h3 className="h5 mt-5 text-center text-secondary">
+              Owner Information
+            </h3>
+            <div className="row mt-4">
+              <div className="col-12 col-md-4 text-center">
+                <i
+                  className="fas fa-user-tie text-primary"
+                  style={{ fontSize: "80px" }}
+                ></i>
+                <h5 className="text-primary mt-3">John Doe</h5>
+                <p className="text-muted small">Founder & CEO</p>
+              </div>
+              <div className="col-12 col-md-8">
+                <p>
+                  SRSR Group LLC was founded by John Doe, a visionary
+                  entrepreneur with over 15 years of experience in the
+                  transportation industry. John's dedication to excellence and
+                  his passion for innovation have been the driving forces behind
+                  the company's success.
+                </p>
+                <p>
+                  Under John's leadership, SRSR Group LLC has grown to become a
+                  trusted name in the industry, known for its commitment to
+                  quality and customer satisfaction. His vision has helped the
+                  company achieve milestones in providing reliable and luxurious
+                  transportation services.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer id="contact" className="bg-light text-center p-4">
