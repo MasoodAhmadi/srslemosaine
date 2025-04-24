@@ -1,27 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import sedanImage from "../images/jac1.jpg";
-
-const cars = [
-  {
-    name: "Sedan",
-    price: "$50/day",
-    description: "Comfortable and fuel-efficient.",
-    image: sedanImage, // Correct image path, assuming jav1.jpg is in the public/images folder
-  },
-  { name: "SUV", price: "$80/day", description: "Spacious and powerful." },
-  {
-    name: "Convertible",
-    price: "$100/day",
-    description: "Stylish and fun to drive.",
-  },
-];
+import { cars } from "../data/car.js";
 
 export default function Dashboard() {
+  const [activeTab, setActiveTab] = useState(cars[0].name); // Default to the first car
+
   return (
     <div className="min-vh-100 d-flex flex-column">
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div className="navbar-brand">🚗 RentMyRide</div>
+        <div className="navbar-brand">SRSLEMOSAIN</div>
         <div className="navbar-nav ml-auto">
           <a href="#pricing" className="nav-link">
             Pricing
@@ -35,15 +22,15 @@ export default function Dashboard() {
       <main className="flex-grow-1 p-4">
         <h1 className="display-3 mb-4">Choose Your Ride</h1>
 
-        {/* Simple Tabs Example Using Bootstrap */}
         <div className="nav nav-tabs" id="carTabs" role="tablist">
-          {cars.map((car, index) => (
+          {cars.map((car) => (
             <a
               key={car.name}
-              className={`nav-item nav-link ${index === 0 ? "active" : ""}`}
+              className={`nav-item nav-link ${
+                activeTab === car.name ? "active" : ""
+              }`}
               id={`${car.name}-tab`}
-              data-bs-toggle="tab"
-              href={`#${car.name}`}
+              onClick={() => setActiveTab(car.name)}
               role="tab"
             >
               {car.name}
@@ -56,7 +43,7 @@ export default function Dashboard() {
             <div
               key={car.name}
               className={`tab-pane fade ${
-                car.name === "Sedan" ? "show active" : ""
+                activeTab === car.name ? "show active" : ""
               }`}
               id={car.name}
               role="tabpanel"
@@ -64,14 +51,12 @@ export default function Dashboard() {
               <div className="card mt-3">
                 <div className="card-body">
                   <h5 className="card-title">{car.name}</h5>
-                  {car.name === "Sedan" && (
-                    <img
-                      src={car.image}
-                      alt={car.name}
-                      className="img-fluid mb-3"
-                      style={{ maxHeight: "250px", objectFit: "cover" }}
-                    />
-                  )}
+                  <img
+                    src={car.image}
+                    alt={car.name}
+                    className="img-fluid mb-3"
+                    style={{ maxHeight: "250px", objectFit: "cover" }}
+                  />
                   <p className="card-text">{car.description}</p>
                   <p className="card-text font-weight-bold">{car.price}</p>
                   <Button variant="primary">Book Now</Button>
