@@ -403,9 +403,9 @@ export default function Dashboard() {
                 <p>
                   SRSR Group LLC was founded by Javed Ahmad Naqshbande, a
                   visionary entrepreneur with over 15 years of experience in the
-                  transportation industry. John's dedication to excellence and
-                  his passion for innovation have been the driving forces behind
-                  the company's success.
+                  transportation industry. Javed Ahmad Naqshbande's dedication
+                  to excellence and his passion for innovation have been the
+                  driving forces behind the company's success.
                 </p>
                 <p>
                   Under Javed Ahmad Naqshband's leadership, SRSR Group LLC has
