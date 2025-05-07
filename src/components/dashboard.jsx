@@ -1,20 +1,13 @@
 import React from "react";
-// import { Button } from "react-bootstrap";
-// import { cars } from "../data/car.js";
-// import logo from "../images/logoto.png";
-import {
-  bWiInternational,
-  dullesInternationa,
-  reganInternational,
-} from "../data/link";
-
-import sedanImage from "../images/jac1.jpg";
+import { dullesInternationa } from "../data/link";
+import { bWiInternational, reganInternational } from "../data/link";
+import sedan from "../images/sedan.png";
+import van from "../images/van.png";
+import suv from "../images/SUV.png";
 import profileImage from "../images/srsprofile.png";
 import NavBar from "./navbars";
 
 export default function Dashboard() {
-  // const [activeTab, setActiveTab] = useState("Sedan");
-
   return (
     <div className="">
       <NavBar />
@@ -29,7 +22,7 @@ export default function Dashboard() {
               style={{
                 width: "100%",
                 height: "auto",
-                objectFit: "cover", // Ensures the image covers the full width
+                objectFit: "cover",
               }}
             />
           </div>
@@ -37,15 +30,15 @@ export default function Dashboard() {
         <h2 className="d-flex justify-content-center display-5 mb-0">
           <strong
             style={{
-              fontSize: "2rem", // Keeps the large size
-              textTransform: "uppercase", // Uppercase for a modern look
-              background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
-              "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
-              color: "transparent", // Makes the text color transparent so the gradient shows
-              fontWeight: "bold", // Ensures the text is bold
-              letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
-              textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
-              fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+              fontSize: "2rem",
+              textTransform: "uppercase",
+              background: "linear-gradient(45deg, #FFD700, #000000)",
+              "-webkit-background-clip": "text",
+              color: "transparent",
+              fontWeight: "bold",
+              letterSpacing: "1px",
+              textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+              fontFamily: "'Roboto', sans-serif",
             }}
           >
             Price list
@@ -55,12 +48,12 @@ export default function Dashboard() {
         <p
           className="d-flex justify-content-center align-items-center mb-4"
           style={{
-            fontSize: "1rem", // Smaller font size for the paragraph text
-            color: "#333", // Normal dark text color
-            fontFamily: "'Roboto', sans-serif", // Ensures the same font family for consistency
-            fontWeight: "normal", // Normal weight for paragraph text
-            textAlign: "center", // Centers the paragraph text
-            marginTop: "0", // Removes extra margin that could cause unwanted gap
+            fontSize: "1rem",
+            color: "#333",
+            fontFamily: "'Roboto', sans-serif",
+            fontWeight: "normal",
+            textAlign: "center",
+            marginTop: "0",
           }}
         >
           Washington DC and Northern VA
@@ -72,26 +65,26 @@ export default function Dashboard() {
           className="d-flex flex-row justify-content-center align-items-start gap-4 my-5 flex-wrap"
         >
           {/* Sedan */}
-          <div className="card border-0 shadow-sm">
+          <div className="card border-0">
             <div className="card-body text-center">
               <h2
                 className="d-flex justify-content-center display-5 mb-4"
                 style={{
-                  fontSize: "1rem", // Keeps the large size
-                  textTransform: "uppercase", // Uppercase for a modern look
-                  background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
-                  "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
-                  color: "transparent", // Makes the text color transparent so the gradient shows
-                  fontWeight: "bold", // Ensures the text is bold
-                  letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
-                  textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
-                  fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+                  fontSize: "1rem",
+                  textTransform: "uppercase",
+                  background: "linear-gradient(45deg, #FFD700, #000000)",
+                  "-webkit-background-clip": "text",
+                  color: "transparent",
+                  fontWeight: "bold",
+                  letterSpacing: "1px",
+                  textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                  fontFamily: "'Roboto', sans-serif",
                 }}
               >
                 <strong>Sedan</strong>
               </h2>{" "}
               <img
-                src={sedanImage}
+                src={sedan}
                 alt="Sedan"
                 className="img-fluid mb-3"
                 style={{ maxHeight: "250px", objectFit: "cover" }}
@@ -105,26 +98,26 @@ export default function Dashboard() {
           </div>
 
           {/* SUV */}
-          <div className="card border-0 shadow-sm">
+          <div className="card border-0">
             <div className="card-body text-center">
               <h2
                 className="d-flex justify-content-center display-5 mb-4"
                 style={{
-                  fontSize: "1rem", // Keeps the large size
-                  textTransform: "uppercase", // Uppercase for a modern look
-                  background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
-                  "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
-                  color: "transparent", // Makes the text color transparent so the gradient shows
-                  fontWeight: "bold", // Ensures the text is bold
-                  letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
-                  textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
-                  fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+                  fontSize: "1rem",
+                  textTransform: "uppercase",
+                  background: "linear-gradient(45deg, #FFD700, #000000)",
+                  "-webkit-background-clip": "text",
+                  color: "transparent",
+                  fontWeight: "bold",
+                  letterSpacing: "1px",
+                  textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                  fontFamily: "'Roboto', sans-serif",
                 }}
               >
                 <strong>SUV</strong>
               </h2>{" "}
               <img
-                src={sedanImage}
+                src={suv}
                 alt="SUV"
                 className="img-fluid mb-3"
                 style={{ maxHeight: "250px", objectFit: "cover" }}
@@ -138,7 +131,7 @@ export default function Dashboard() {
           </div>
 
           {/* Van */}
-          <div className="card border-0 shadow-sm">
+          <div className="card border-0">
             <div className="card-body text-center">
               <h2
                 className="d-flex justify-content-center display-5 mb-4"
@@ -157,7 +150,7 @@ export default function Dashboard() {
                 <strong>VAN</strong>
               </h2>{" "}
               <img
-                src={sedanImage}
+                src={van}
                 alt="Van"
                 className="img-fluid mb-3"
                 style={{ maxHeight: "250px", objectFit: "cover" }}
@@ -175,15 +168,15 @@ export default function Dashboard() {
         <h2
           className="text-center mb-5 display-5"
           style={{
-            fontSize: "2rem", // Keeps the large size
-            textTransform: "uppercase", // Uppercase for a modern look
-            background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
-            "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
-            color: "transparent", // Makes the text color transparent so the gradient shows
-            fontWeight: "bold", // Ensures the text is bold
-            letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
-            textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
-            fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+            fontSize: "2rem",
+            textTransform: "uppercase",
+            background: "linear-gradient(45deg, #FFD700, #000000)",
+            "-webkit-background-clip": "text",
+            color: "transparent",
+            fontWeight: "bold",
+            letterSpacing: "1px",
+            textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+            fontFamily: "'Roboto', sans-serif",
           }}
         >
           Airports
@@ -202,15 +195,15 @@ export default function Dashboard() {
                 <h5
                   className="card-title"
                   style={{
-                    fontSize: "2rem", // Keeps the large size
-                    textTransform: "uppercase", // Uppercase for a modern look
-                    background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
-                    "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
-                    color: "transparent", // Makes the text color transparent so the gradient shows
-                    fontWeight: "bold", // Ensures the text is bold
-                    letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
-                    textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
-                    fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+                    fontSize: "2rem",
+                    textTransform: "uppercase",
+                    background: "linear-gradient(45deg, #FFD700, #000000)",
+                    "-webkit-background-clip": "text",
+                    color: "transparent",
+                    fontWeight: "bold",
+                    letterSpacing: "1px",
+                    textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                    fontFamily: "'Roboto', sans-serif",
                   }}
                 >
                   IAD
@@ -244,15 +237,15 @@ export default function Dashboard() {
                 <h5
                   className="card-title"
                   style={{
-                    fontSize: "2rem", // Keeps the large size
-                    textTransform: "uppercase", // Uppercase for a modern look
-                    background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
-                    "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
-                    color: "transparent", // Makes the text color transparent so the gradient shows
-                    fontWeight: "bold", // Ensures the text is bold
-                    letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
-                    textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
-                    fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+                    fontSize: "2rem",
+                    textTransform: "uppercase",
+                    background: "linear-gradient(45deg, #FFD700, #000000)",
+                    "-webkit-background-clip": "text",
+                    color: "transparent",
+                    fontWeight: "bold",
+                    letterSpacing: "1px",
+                    textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                    fontFamily: "'Roboto', sans-serif",
                   }}
                 >
                   DCA
@@ -286,15 +279,15 @@ export default function Dashboard() {
                 <h5
                   className="card-title"
                   style={{
-                    fontSize: "2rem", // Keeps the large size
-                    textTransform: "uppercase", // Uppercase for a modern look
-                    background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
-                    "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
-                    color: "transparent", // Makes the text color transparent so the gradient shows
-                    fontWeight: "bold", // Ensures the text is bold
-                    letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
-                    textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
-                    fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+                    fontSize: "2rem",
+                    textTransform: "uppercase",
+                    background: "linear-gradient(45deg, #FFD700, #000000)",
+                    "-webkit-background-clip": "text",
+                    color: "transparent",
+                    fontWeight: "bold",
+                    letterSpacing: "1px",
+                    textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                    fontFamily: "'Roboto', sans-serif",
                   }}
                 >
                   BWI
@@ -317,20 +310,20 @@ export default function Dashboard() {
         </div>
 
         {/* Company Information Section */}
-        <section className="company-info mt-5 p-4 bg-light rounded shadow-sm">
+        <section className="company-info mt-5 p-4 bg-light rounded">
           <div className="container">
             <h2
               className="h4 mb-4 text-center"
               style={{
-                fontSize: "2rem", // Keeps the large size
-                textTransform: "uppercase", // Uppercase for a modern look
-                background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
-                "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
-                color: "transparent", // Makes the text color transparent so the gradient shows
-                fontWeight: "bold", // Ensures the text is bold
-                letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
-                textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
-                fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+                fontSize: "2rem",
+                textTransform: "uppercase",
+                background: "linear-gradient(45deg, #FFD700, #000000)",
+                "-webkit-background-clip": "text",
+                color: "transparent",
+                fontWeight: "bold",
+                letterSpacing: "1px",
+                textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                fontFamily: "'Roboto', sans-serif",
               }}
             >
               About SRSR Group LLC
@@ -362,15 +355,15 @@ export default function Dashboard() {
             <h3
               className="h5 mt-5 text-center"
               style={{
-                fontSize: "1rem", // Keeps the large size
-                textTransform: "uppercase", // Uppercase for a modern look
-                background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
-                "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
-                color: "transparent", // Makes the text color transparent so the gradient shows
-                fontWeight: "bold", // Ensures the text is bold
-                letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
-                textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
-                fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+                fontSize: "1rem",
+                textTransform: "uppercase",
+                background: "linear-gradient(45deg, #FFD700, #000000)",
+                "-webkit-background-clip": "text",
+                color: "transparent",
+                fontWeight: "bold",
+                letterSpacing: "1px",
+                textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                fontFamily: "'Roboto', sans-serif",
               }}
             >
               Owner Information
@@ -403,15 +396,74 @@ export default function Dashboard() {
             </div>
           </div>
         </section>
+        <hr
+          style={{
+            width: "95%",
+            margin: "2rem auto",
+          }}
+        />
+        {/* Opening Hours Section */}
+        <section className="bg-light p-4">
+          <div className="container">
+            <h2
+              className="h4 mb-4 text-center"
+              style={{
+                fontSize: "2rem",
+                textTransform: "uppercase",
+                background: "linear-gradient(45deg, #FFD700, #000000)",
+                "-webkit-background-clip": "text",
+                color: "transparent",
+                fontWeight: "bold",
+                letterSpacing: "1px",
+                textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                fontFamily: "'Roboto', sans-serif",
+              }}
+            >
+              SRSR Limousine Hours
+            </h2>
+            <div className="col d-flex flex-row justify-content-center align-items-start gap-4 flex-wrap">
+              <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                <ul className="list-unstyled">
+                  <li>
+                    <strong>Mon:</strong> 09:00 am – 05:00 pm
+                  </li>
+                  <li>
+                    <strong>Tue:</strong> 09:00 am – 05:00 pm
+                  </li>
+                  <li>
+                    <strong>Wed:</strong> 09:00 am – 05:00 pm
+                  </li>
+                  <li>
+                    <strong>Thu:</strong> 09:00 am – 05:00 pm
+                  </li>
+                  <li>
+                    <strong>Fri:</strong> 09:00 am – 05:00 pm
+                  </li>
+                </ul>
+              </div>
+              <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                <ul className="list-unstyled">
+                  <li>
+                    <strong>Sat:</strong> Closed
+                  </li>
+                  <li>
+                    <strong>Sun:</strong> Closed
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
+      {/* Contact Us Section */}
       <footer id="contact" className="bg-light text-center p-4">
         <h2 className="h5 mb-2">Contact Us</h2>
         <div className="d-flex justify-content-center align-items-center mb-3">
           <span>📞 +1 (571) 2849330</span>
         </div>
         <div className="d-flex justify-content-center align-items-center mb-3">
-          <span>📧 support@rentmyride.com</span>
+          <span>📧 support@example.com</span>
         </div>
         <p className="text-muted small">
           © 2025 SRSR group LLC. All rights reserved.
