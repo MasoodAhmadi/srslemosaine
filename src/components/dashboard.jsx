@@ -4,6 +4,7 @@ import { bWiInternational, reganInternational } from "../data/link";
 import sedan from "../images/sedan.png";
 import van from "../images/van.png";
 import suv from "../images/SUV.png";
+import ceo from "../images/ceo.png";
 import profileImage from "../images/srsprofile.png";
 import NavBar from "./navbars";
 
@@ -370,27 +371,48 @@ export default function Dashboard() {
             </h3>
             <div className="row mt-4">
               <div className="col-12 col-md-4 text-center">
-                <i
-                  className="fas fa-user-tie text-primary"
-                  style={{ fontSize: "80px" }}
-                ></i>
-                <h5 className="text-primary mt-3">John Doe</h5>
+                <img
+                  src={ceo}
+                  alt="John Doe - CEO"
+                  className="img-fluid rounded-circle mb-3"
+                  style={{
+                    width: "120px",
+                    height: "120px",
+                    objectFit: "cover",
+                  }}
+                />
+                <h5
+                  className="mt-3"
+                  style={{
+                    fontSize: "1rem",
+                    textTransform: "uppercase",
+                    background: "linear-gradient(45deg, #FFD700, #000000)",
+                    "-webkit-background-clip": "text",
+                    color: "transparent",
+                    fontWeight: "bold",
+                    letterSpacing: "1px",
+                    textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                    fontFamily: "'Roboto', sans-serif",
+                  }}
+                >
+                  Javed Ahmad Naqshband
+                </h5>
                 <p className="text-muted small">Founder & CEO</p>
               </div>
               <div className="col-12 col-md-8">
                 <p>
-                  SRSR Group LLC was founded by John Doe, a visionary
-                  entrepreneur with over 15 years of experience in the
+                  SRSR Group LLC was founded by Javed Ahmad Naqshbande, a
+                  visionary entrepreneur with over 15 years of experience in the
                   transportation industry. John's dedication to excellence and
                   his passion for innovation have been the driving forces behind
                   the company's success.
                 </p>
                 <p>
-                  Under John's leadership, SRSR Group LLC has grown to become a
-                  trusted name in the industry, known for its commitment to
-                  quality and customer satisfaction. His vision has helped the
-                  company achieve milestones in providing reliable and luxurious
-                  transportation services.
+                  Under Javed Ahmad Naqshband's leadership, SRSR Group LLC has
+                  grown to become a trusted name in the industry, known for its
+                  commitment to quality and customer satisfaction. His vision
+                  has helped the company achieve milestones in providing
+                  reliable and luxurious transportation services.
                 </p>
               </div>
             </div>
