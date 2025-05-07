@@ -1,154 +1,338 @@
-import React, { useState } from "react";
-import { Button } from "react-bootstrap";
-import { cars } from "../data/car.js";
-import logo from "../images/logoto.png";
+import React from "react";
+// import { Button } from "react-bootstrap";
+// import { cars } from "../data/car.js";
+// import logo from "../images/logoto.png";
+import {
+  bWiInternational,
+  dullesInternationa,
+  reganInternational,
+} from "../data/link";
+
+import sedanImage from "../images/jac1.jpg";
+import profileImage from "../images/srsprofile.png";
+import NavBar from "./navbars";
 
 export default function Dashboard() {
-  const [activeTab, setActiveTab] = useState("Sedan");
+  // const [activeTab, setActiveTab] = useState("Sedan");
 
   return (
-    <div className="min-vh-100 d-flex flex-column">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-        <div className="navbar-brand d-flex align-items-center">
-          <img
-            src={logo}
-            alt="SRSR Logo"
-            style={{
-              width: "50px",
-              height: "50px",
-              marginRight: "10px",
-              marginLeft: "12px",
-            }}
-          />
-          <strong>SRSRLEMOSAIN</strong>
-        </div>
-        <div className="navbar-nav ml-auto">
-          <a href="#pricing" className="nav-link">
-            Pricing
-          </a>
-          <a href="#contact" className="nav-link">
-            Contact
-          </a>
-        </div>
-      </nav>
+    <div className="">
+      <NavBar />
 
-      <main className="flex-grow-1 p-4">
-        <h5 className="display-5 mb-4">Specify Your Transportation Method</h5>
-
-        <div
-          className="nav nav-tabs mb-4 bg-white rounded-top justify-content-center"
-          id="carTabs"
-          role="tablist"
-        >
-          {["Sedan", "SUV", "Convertible"].map((tab) => (
-            <a
-              key={tab}
-              className={`nav-item nav-link ${
-                activeTab === tab ? "active custom-tab-active" : ""
-              }`}
-              id={`${tab}-tab`}
-              onClick={() => setActiveTab(tab)}
-              role="tab"
+      <main className="">
+        <section className="mb-5">
+          <div>
+            <img
+              src={profileImage}
+              alt="Profile"
+              className="mb-3"
               style={{
-                cursor: "pointer",
-                padding: "12px 24px",
-                fontSize: activeTab === tab ? "1.15rem" : "1.05rem",
-                fontWeight: activeTab === tab ? "600" : "500",
-                borderRadius: "0.75rem 0.75rem 0 0",
-                margin: "0 6px",
+                width: "100%",
+                height: "auto",
+                objectFit: "cover", // Ensures the image covers the full width
               }}
-            >
-              {tab}
-            </a>
-          ))}
+            />
+          </div>
+        </section>
+        <h2 className="d-flex justify-content-center display-5 mb-0">
+          <strong
+            style={{
+              fontSize: "2rem", // Keeps the large size
+              textTransform: "uppercase", // Uppercase for a modern look
+              background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
+              "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
+              color: "transparent", // Makes the text color transparent so the gradient shows
+              fontWeight: "bold", // Ensures the text is bold
+              letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
+              textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
+              fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+            }}
+          >
+            Price list
+          </strong>
+        </h2>
+
+        <p
+          className="d-flex justify-content-center align-items-center mb-4"
+          style={{
+            fontSize: "1rem", // Smaller font size for the paragraph text
+            color: "#333", // Normal dark text color
+            fontFamily: "'Roboto', sans-serif", // Ensures the same font family for consistency
+            fontWeight: "normal", // Normal weight for paragraph text
+            textAlign: "center", // Centers the paragraph text
+            marginTop: "0", // Removes extra margin that could cause unwanted gap
+          }}
+        >
+          Washington DC and Northern VA
+        </p>
+
+        {/* Pricing Section */}
+        <div
+          id="pricing"
+          className="d-flex flex-row justify-content-center align-items-start gap-4 my-5 flex-wrap"
+        >
+          {/* Sedan */}
+          <div className="card border-0 shadow-sm">
+            <div className="card-body text-center">
+              <h2
+                className="d-flex justify-content-center display-5 mb-4"
+                style={{
+                  fontSize: "1rem", // Keeps the large size
+                  textTransform: "uppercase", // Uppercase for a modern look
+                  background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
+                  "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
+                  color: "transparent", // Makes the text color transparent so the gradient shows
+                  fontWeight: "bold", // Ensures the text is bold
+                  letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
+                  textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
+                  fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+                }}
+              >
+                <strong>Sedan</strong>
+              </h2>{" "}
+              <img
+                src={sedanImage}
+                alt="Sedan"
+                className="img-fluid mb-3"
+                style={{ maxHeight: "250px", objectFit: "cover" }}
+              />
+              <ul className="list-unstyled">
+                <li>Hourly Rate: $75</li>
+                <li>Minimum Booking: 2 hours</li>
+                <li>Additional Hours: $70/hour</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* SUV */}
+          <div className="card border-0 shadow-sm">
+            <div className="card-body text-center">
+              <h2
+                className="d-flex justify-content-center display-5 mb-4"
+                style={{
+                  fontSize: "1rem", // Keeps the large size
+                  textTransform: "uppercase", // Uppercase for a modern look
+                  background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
+                  "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
+                  color: "transparent", // Makes the text color transparent so the gradient shows
+                  fontWeight: "bold", // Ensures the text is bold
+                  letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
+                  textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
+                  fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+                }}
+              >
+                <strong>SUV</strong>
+              </h2>{" "}
+              <img
+                src={sedanImage}
+                alt="SUV"
+                className="img-fluid mb-3"
+                style={{ maxHeight: "250px", objectFit: "cover" }}
+              />
+              <ul className="list-unstyled">
+                <li>Hourly Rate: $85</li>
+                <li>Minimum Booking: 2 hours</li>
+                <li>Additional Hours: $80/hour</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Van */}
+          <div className="card border-0 shadow-sm">
+            <div className="card-body text-center">
+              <h2
+                className="d-flex justify-content-center display-5 mb-4"
+                style={{
+                  fontSize: "1rem",
+                  textTransform: "uppercase",
+                  background: "linear-gradient(45deg, #FFD700, #000000)",
+                  "-webkit-background-clip": "text",
+                  color: "transparent",
+                  fontWeight: "bold",
+                  letterSpacing: "1px",
+                  textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                  fontFamily: "'Roboto', sans-serif",
+                }}
+              >
+                <strong>VAN</strong>
+              </h2>{" "}
+              <img
+                src={sedanImage}
+                alt="Van"
+                className="img-fluid mb-3"
+                style={{ maxHeight: "250px", objectFit: "cover" }}
+              />
+              <ul className="list-unstyled">
+                <li>Hourly Rate: $180</li>
+                <li>Minimum Booking: 2 hours</li>
+                <li>Additional Hours: $170/hour</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div className="tab-content mt-4">
-          {activeTab === "Sedan" ? (
-            <div
-              className="tab-pane fade show active"
-              id="Sedan"
-              role="tabpanel"
-            >
-              <div className="row">
-                {cars
-                  .filter((car) => car.name.toLowerCase().includes("sedan"))
-                  .map((car, index) => (
-                    <div key={index} className="col-12 col-sm-6 col-md-4 mb-4">
-                      <div className="card h-100">
-                        <div className="ratio ratio-4x3">
-                          <img
-                            src={car.image}
-                            alt={car.name}
-                            className="card-img-top"
-                            style={{ objectFit: "cover" }}
-                          />
-                        </div>
-                        <div className="card-body d-flex flex-column">
-                          <h5 className="card-title">{car.name}</h5>
-                          <p className="card-text">{car.description}</p>
-                          <p className="card-text fw-bold">{car.price}</p>
-                          <Button variant="primary" className="mt-auto">
-                            Book Now
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
+        {/* Airport Section */}
+        <h2
+          className="text-center mb-5 display-5"
+          style={{
+            fontSize: "2rem", // Keeps the large size
+            textTransform: "uppercase", // Uppercase for a modern look
+            background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
+            "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
+            color: "transparent", // Makes the text color transparent so the gradient shows
+            fontWeight: "bold", // Ensures the text is bold
+            letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
+            textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
+            fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+          }}
+        >
+          Airports
+        </h2>
+        <div className="row">
+          {/* IAD */}
+          <div className="col-md-4 mb-4">
+            <div className="card border-0 h-100 text-center">
+              <img
+                src={dullesInternationa}
+                alt="IAD"
+                className="card-img-top p-3"
+                style={{ maxHeight: "120px", objectFit: "contain" }}
+              />
+              <div className="card-body">
+                <h5
+                  className="card-title"
+                  style={{
+                    fontSize: "2rem", // Keeps the large size
+                    textTransform: "uppercase", // Uppercase for a modern look
+                    background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
+                    "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
+                    color: "transparent", // Makes the text color transparent so the gradient shows
+                    fontWeight: "bold", // Ensures the text is bold
+                    letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
+                    textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
+                    fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+                  }}
+                >
+                  IAD
+                </h5>
+                <p>Standard prices to DC</p>
+                <ul className="list-unstyled">
+                  <li>
+                    <strong>Sedan:</strong> $100
+                  </li>
+                  <li>
+                    <strong>SUV:</strong> $140
+                  </li>
+                  <li>
+                    <strong>Sprinter Van:</strong> $220
+                  </li>
+                </ul>
               </div>
             </div>
-          ) : (
-            <div
-              className="tab-pane fade show active"
-              id={activeTab}
-              role="tabpanel"
-            >
-              {cars
-                .filter((car) => car.name === activeTab)
-                .map((car, index) => (
-                  <div key={index} className="col-12 col-sm-6 col-md-4 mb-4">
-                    <div className="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                      <div className="ratio ratio-4x3">
-                        <img
-                          src={car.image}
-                          alt={car.name}
-                          className="card-img-top"
-                          style={{
-                            objectFit: "cover",
-                          }}
-                        />
-                      </div>
-                      <div className="card-body d-flex flex-column p-4">
-                        <h5 className="card-title fw-semibold mb-2">
-                          {car.name}
-                        </h5>
-                        <p
-                          className="card-text text-muted mb-1"
-                          style={{ minHeight: "60px" }}
-                        >
-                          {car.description}
-                        </p>
-                        <p className="card-text fw-bold text-primary mb-3">
-                          {car.price}
-                        </p>
-                        <Button
-                          variant="primary"
-                          className="mt-auto w-100 rounded-pill"
-                        >
-                          Book Now
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+          </div>
+
+          {/* DCA */}
+          <div className="col-md-4 mb-4">
+            <div className="card border-0 h-100 text-center">
+              <img
+                src={reganInternational}
+                alt="DCA"
+                className="card-img-top p-3"
+                style={{ maxHeight: "120px", objectFit: "contain" }}
+              />
+              <div className="card-body">
+                <h5
+                  className="card-title"
+                  style={{
+                    fontSize: "2rem", // Keeps the large size
+                    textTransform: "uppercase", // Uppercase for a modern look
+                    background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
+                    "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
+                    color: "transparent", // Makes the text color transparent so the gradient shows
+                    fontWeight: "bold", // Ensures the text is bold
+                    letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
+                    textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
+                    fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+                  }}
+                >
+                  DCA
+                </h5>
+                <p>Standard prices to DC</p>
+                <ul className="list-unstyled">
+                  <li>
+                    <strong>Sedan:</strong> $75
+                  </li>
+                  <li>
+                    <strong>SUV:</strong> $85
+                  </li>
+                  <li>
+                    <strong>Sprinter Van:</strong> $180
+                  </li>
+                </ul>
+              </div>
             </div>
-          )}
+          </div>
+
+          {/* BWI */}
+          <div className="col-md-4 mb-4">
+            <div className="card border-0 h-100 text-center">
+              <img
+                src={bWiInternational}
+                alt="BWI"
+                className="card-img-top p-3"
+                style={{ maxHeight: "120px", objectFit: "contain" }}
+              />
+              <div className="card-body">
+                <h5
+                  className="card-title"
+                  style={{
+                    fontSize: "2rem", // Keeps the large size
+                    textTransform: "uppercase", // Uppercase for a modern look
+                    background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
+                    "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
+                    color: "transparent", // Makes the text color transparent so the gradient shows
+                    fontWeight: "bold", // Ensures the text is bold
+                    letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
+                    textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
+                    fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+                  }}
+                >
+                  BWI
+                </h5>
+                <p>Standard prices to DC</p>
+                <ul className="list-unstyled">
+                  <li>
+                    <strong>Sedan:</strong> $165
+                  </li>
+                  <li>
+                    <strong>SUV:</strong> $185
+                  </li>
+                  <li>
+                    <strong>Sprinter Van:</strong> $280
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Company Information Section */}
         <section className="company-info mt-5 p-4 bg-light rounded shadow-sm">
           <div className="container">
-            <h2 className="h4 mb-4 text-center text-primary">
+            <h2
+              className="h4 mb-4 text-center"
+              style={{
+                fontSize: "2rem", // Keeps the large size
+                textTransform: "uppercase", // Uppercase for a modern look
+                background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
+                "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
+                color: "transparent", // Makes the text color transparent so the gradient shows
+                fontWeight: "bold", // Ensures the text is bold
+                letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
+                textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
+                fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+              }}
+            >
               About SRSR Group LLC
             </h2>
             <div className="row">
@@ -175,7 +359,20 @@ export default function Dashboard() {
                 ></i>
               </div>
             </div>
-            <h3 className="h5 mt-5 text-center text-secondary">
+            <h3
+              className="h5 mt-5 text-center"
+              style={{
+                fontSize: "1rem", // Keeps the large size
+                textTransform: "uppercase", // Uppercase for a modern look
+                background: "linear-gradient(45deg, #FFD700, #000000)", // Gradient from gold to black
+                "-webkit-background-clip": "text", // Ensures the gradient is applied to the text
+                color: "transparent", // Makes the text color transparent so the gradient shows
+                fontWeight: "bold", // Ensures the text is bold
+                letterSpacing: "1px", // Adds some spacing between the letters for a more dramatic effect
+                textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)", // Adds a subtle shadow for depth
+                fontFamily: "'Roboto', sans-serif", // Modern, clean font for a polished feel
+              }}
+            >
               Owner Information
             </h3>
             <div className="row mt-4">
