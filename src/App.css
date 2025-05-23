@@ -1,0 +1,10 @@
+.custom-auth-modal {
+  max-width: 400px;
+  margin: auto;
+}
+
+.custom-auth-modal .modal-content {
+  border: none;
+  background: transparent;
+  box-shadow: none; /* Optional */
+}
