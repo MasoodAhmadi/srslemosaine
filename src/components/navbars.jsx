@@ -39,6 +39,7 @@ const NavBar = () => {
             <Nav className="ms-auto align-items-center gap-2">
               <Nav.Link href="#pricing">Pricing</Nav.Link>
               <Nav.Link href="#contact">Contact</Nav.Link>
+              <Nav.Link href="#payment">Payment</Nav.Link>
               {userLoggedIn && <Nav.Link href="/dashboard">Dashboard</Nav.Link>}
               {userLoggedIn ? (
                 <Button

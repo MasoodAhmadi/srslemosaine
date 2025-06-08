@@ -6,6 +6,10 @@ import van from "../images/van.png";
 import suv from "../images/SUV.png";
 import ceo from "../images/ceo.png";
 import profileImage from "../images/srsprofile.png";
+import { Card } from "react-bootstrap";
+import VenmoPay from "../images/venmo.png";
+import { Link } from "react-router-dom";
+import { venmoLink } from "../data/link";
 
 export default function Home() {
   return (
@@ -415,6 +419,62 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* payment  Section */}
+        {/* <section
+          className="company-info mt-5 p-4 bg-light rounded"
+          id="payment"
+        >
+          <div className="container">
+            <h2
+              className="h4 mb-4 text-center"
+              style={{
+                fontSize: "2rem",
+                textTransform: "uppercase",
+                background: "linear-gradient(45deg, #FFD700, #000000)",
+                "-webkit-background-clip": "text",
+                color: "transparent",
+                fontWeight: "bold",
+                letterSpacing: "1px",
+                textShadow: "2px 2px 5px rgba(0, 0, 0, 0.3)",
+                fontFamily: "'Roboto', sans-serif",
+              }}
+            >
+              Payment
+            </h2>
+            <div className="row">
+              <div className="col-12 col-md-6">
+                <p>
+                  Payment method: we accept all major credit cards, paypal, cash
+                  and venmo.
+                </p>
+              </div>
+              <Card
+                style={{
+                  width: "18rem",
+                  border: "none",
+                  background: "transparent",
+                }}
+              >
+                <div className="d-flex mb-3 justify-content-center align-items-center">
+                  <div className="p-2 ">
+                    <Card.Img variant="" src={VenmoPay} className="p-2" />
+                    <Link
+                      to={venmoLink}
+                      target="_blank"
+                      className="d-flex mb-3 justify-content-center align-items-center"
+                    >
+                      venmo payment here
+                    </Link>
+                  </div>
+
+                  <Card.Body>
+                    <Card.Text></Card.Text>
+                  </Card.Body>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section> */}
         <hr
           style={{
             width: "95%",

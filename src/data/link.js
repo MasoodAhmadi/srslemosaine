@@ -1,3 +1,4 @@
 export const dullesInternationa = 'https://img1.wsimg.com/isteam/ip/091b43d1-a908-4437-9385-054de001689d/blob-8aeed47.png/:/cr=t:24.44%25,l:0%25,w:100%25,h:51.11%25/rs=w:360,h:180,cg:true'
 export const reganInternational = 'https://img1.wsimg.com/isteam/ip/091b43d1-a908-4437-9385-054de001689d/blob-15f188f.png/:/cr=t:32.01%25,l:13.9%25,w:80.65%25,h:40.32%25/rs=w:400,h:200,cg:true'
 export const bWiInternational = 'https://img1.wsimg.com/isteam/ip/091b43d1-a908-4437-9385-054de001689d/download%20(1).png/:/cr=t:24.44%25,l:0%25,w:100%25,h:51.11%25/rs=w:360,h:180,cg:true'
+export const venmoLink = 'https://venmo.com/u/JavedAhmad-Naqshband?fbclid=IwY2xjawKKivVleHRuA2FlbQIxMABicmlkETBiZTBOQXNuWXFIWWNYQzNhAR6xMi9QAuErrkFBSwZ9uNb6l_oMYV-DeM7KWbxWIpYw_mpE3ZwUJF-oBU74UA_aem_heDc8UZmxAz_tuRyjaqdAw';

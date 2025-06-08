@@ -51,9 +51,7 @@ const Login = ({ onSwitchToRegister, onRegisterSuccess }) => {
           }}
         >
           <Card.Body>
-            <h2 className="mb-4 text-center text-primary fw-bold">
-              Create Account
-            </h2>
+            <h2 className="mb-4 text-center text-primary fw-bold">Sign In</h2>
             <Form autoComplete="off">
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label className="fw-semibold">Email address</Form.Label>
